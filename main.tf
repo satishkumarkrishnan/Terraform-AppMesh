@@ -109,7 +109,7 @@ resource "aws_appmesh_virtual_service" "tokyo_servicea" {
   }
 }
 #AppMesh with Virtual Gateway 
-resource "aws_appmesh_virtual_gateway" "tokyo_example" {
+resource "aws_appmesh_virtual_gateway" "tokyo-example" {
   name      = "tokyo-example-virtual-gateway"
   mesh_name = "aws_appmesh_mesh.tokyo_appmesh.id"
 
