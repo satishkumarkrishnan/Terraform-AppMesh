@@ -111,7 +111,7 @@ resource "aws_appmesh_virtual_service" "tokyo_servicea" {
 #AppMesh with Virtual Gateway 
 resource "aws_appmesh_virtual_gateway" "tokyo-example" {
   name      = "tokyo-example-virtual-gateway"
-  mesh_name = "tokyo-example-service-mesh"
+  mesh_name = "tokyo-appmesh"
 
   spec {
     listener {
