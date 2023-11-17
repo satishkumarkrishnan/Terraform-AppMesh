@@ -108,3 +108,21 @@ resource "aws_appmesh_virtual_service" "tokyo_servicea" {
     }
   }
 }
+#AppMesh with Virtual Gateway 
+resource "aws_appmesh_virtual_gateway" "tokyo_example" {
+  name      = "tokyo-example-virtual-gateway"
+  mesh_name = "aws_appmesh_mesh.tokyo_appmesh.id"
+
+  spec {
+    listener {
+      port_mapping {
+        port     = 8080
+        protocol = "http"
+      }
+    }
+  }
+
+  tags = {
+    Environment = "test"
+  }
+}
